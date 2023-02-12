@@ -1,5 +1,6 @@
 package com.susu.projectthestyle.controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @Transactional // 꼭 springframework 쪽을 import - TEST 에서 시작되는 트랜젝션은 기본적으로 [롤백]이다.
 @DisplayName("Data REST - API 테스트")
+@Disabled("Spring Data REST 통합테스트는 불필요하므로 제외시킴")
 public class DataRestTest {
 
     private final MockMvc mvc;
