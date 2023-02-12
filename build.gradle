@@ -26,6 +26,9 @@ dependencies {
     implementation 'org.springframework.data:spring-data-rest-hal-explorer' //우리가 만든 api 테스트하기 위해서
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'mysql:mysql-connector-java'
     compileOnly 'org.projectlombok:lombok'
