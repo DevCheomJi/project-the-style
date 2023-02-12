@@ -32,6 +32,7 @@ dependencies {
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor' // 사용자 직접 만든 커스텀 프로퍼티들도 문서를 만들 수 있고 ide 지원받을 수 있다.
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     //queryDSL 설정
