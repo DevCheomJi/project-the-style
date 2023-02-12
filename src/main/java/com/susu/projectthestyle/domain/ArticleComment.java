@@ -22,19 +22,14 @@ import java.util.Objects;
         @Index(columnList = "createdBy"),
 
 } )
-@EntityListeners(AuditingEntityListener.class)
 @Entity
-public class ArticleComment {
+public class ArticleComment  extends AuditingFields {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //mysql 에서는 identity로
     private Long id;
     @Setter @ManyToOne(optional = false) private Article article; // 댓글 삭제되더라도 게시글은 남아있어야 하니 cascade none(기본값) 설정
     @Setter @Column(nullable = false, length = 500) private String content; // 본문
 
-    @CreatedDate @Column(nullable = false) private LocalDateTime createdAt; //생성일시
-    @CreatedBy @Column(nullable = false, length = 100) private String createdBy; //생성자
-    @LastModifiedDate @Column(nullable = false) private LocalDateTime modifiedAt; //수정일시
-    @LastModifiedBy @Column(nullable = false, length = 100) private String modifiedBy; //수정자
 
     protected ArticleComment(){}
 
