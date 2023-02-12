@@ -24,6 +24,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.data:spring-data-rest-hal-explorer' //우리가 만든 api 테스트하기 위해서
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'mysql:mysql-connector-java'
@@ -31,6 +35,7 @@ dependencies {
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor' // 사용자 직접 만든 커스텀 프로퍼티들도 문서를 만들 수 있고 ide 지원받을 수 있다.
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     //queryDSL 설정
